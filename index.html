@@ -66,10 +66,13 @@
    async function deleteItem(id) {
        let URL = `https://crud.teamrabbil.com/api/v1/DeleteProduct/${id}`
        let res = await axios.get(URL);
-       if(res.status===200){
-         document.getElementById('itemList').innerHTML=""
-         await getList();
-       }
+// refesh the page shortcut
+        window.location.reload();
+// refresh the page by geting the list again
+       // if(res.status===200){
+       //   document.getElementById('itemList').innerHTML=""
+       //   await getList();
+       // }
    }
 
    async function updateItem(id){
